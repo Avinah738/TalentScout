@@ -1,7 +1,6 @@
 import streamlit as st
 from openai import OpenAI
 from prompts import generate_candidate_info_prompt, generate_technical_questions_prompt
-import os
 import json
 import logging
 
