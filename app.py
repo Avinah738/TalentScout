@@ -52,10 +52,7 @@ def get_all_candidates():
     except Exception as e:
         logging.error(f"Error fetching candidate data: {e}")
         return []
-
-# Page Configuration
-st.set_page_config(page_title="Hiring Assistant Chatbot", layout="wide")
-
+        
 st.markdown("""
     <style>
     body {
