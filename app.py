@@ -7,6 +7,9 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
+# Debugging: Print available secrets
+st.write("Available secrets:", st.secrets)
+
 # Load environment variables
 api_key = st.secrets["OPENAI_API_KEY"]
 # api_key = "Enter the actual api key directly here if .env key not working"
