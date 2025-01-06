@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %
 st.write("Available secrets:", st.secrets)
 
 # Load environment variables
-api_key = st.secrets["OPENAI_API_KEY"]
+api_key = st.secrets["default"]["OPENAI_API_KEY"]
 # api_key = "Enter the actual api key directly here if .env key not working"
 client = OpenAI(api_key=api_key)
 
