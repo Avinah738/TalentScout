@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 from prompts import generate_candidate_info_prompt, generate_technical_questions_prompt
-from dotenv import load_dotenv
+from decouple import config
 import os
 import json
 import logging
@@ -10,9 +10,8 @@ import logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 # Load environment variables
-load_dotenv()
-api_key = os.getenv("OPENAI_API_KEY")
-# api_key = "Enter the actual api key directly here if .env key not working (from README.md)"
+api_key = config('OPENAI_API_KEY', default='')
+# api_key = "Enter the actual api key directly here if .env key not working"
 client = OpenAI(api_key=api_key)
 
 # File path for simulated storage
