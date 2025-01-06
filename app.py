@@ -2,6 +2,7 @@ import streamlit as st
 from openai import OpenAI
 from prompts import generate_candidate_info_prompt, generate_technical_questions_prompt
 import json
+import os
 import logging
 
 # Set page configuration at the very beginning
