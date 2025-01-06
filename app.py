@@ -4,11 +4,11 @@ from prompts import generate_candidate_info_prompt, generate_technical_questions
 import json
 import logging
 
+# Set page configuration at the very beginning
+st.set_page_config(page_title="Hiring Assistant Chatbot", layout="wide")
+
 # Configure logging
 logging.basicConfig(level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
-
-# Debugging: Print available secrets
-st.write("Available secrets:", st.secrets)
 
 # Load environment variables
 api_key = st.secrets["default"]["OPENAI_API_KEY"]
